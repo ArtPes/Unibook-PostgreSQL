@@ -15,6 +15,7 @@ class LikePostPage extends Model
 {
   protected $table = 'pages_like_posts';
   public $timestamps = false;
+  public $incrementing = false;
 
   public function scopeSetPagePostReaction($query, $action, $id_post, $liker_id){
     $user = Page::where('id_page', $liker_id)->first();

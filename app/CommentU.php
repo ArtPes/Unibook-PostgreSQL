@@ -8,4 +8,5 @@ class CommentU extends Model
 {
   protected $table = 'comments';
   public $timestamps = false;
+  public $incrementing = false;
 }

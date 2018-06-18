@@ -14,6 +14,7 @@ class LikeComment extends Model
 {
 	protected $table = 'like_comments';
 	public $timestamps = false;
+	public $incrementing = false;
 
 	public function scopeGetLikeComment($query, $comment){
 		$likes = LikeComment::where('id_comment', $comment['id_comment'])->where('like', 1)->get();

@@ -15,6 +15,7 @@ class LikeCommentPage extends Model
 {
   protected $table = 'pages_like_comments';
   public $timestamps = false;
+  public $incrementing = false;
 
   public function scopeSetCommentPageReaction($query, $action, $id_comment, $page){
     switch($action){

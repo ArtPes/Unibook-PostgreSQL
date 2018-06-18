@@ -8,4 +8,5 @@ class PostUser extends Model
 {
   protected $table = 'posts_user';
   public $timestamps = false;
+  public $incrementing = false;
 }

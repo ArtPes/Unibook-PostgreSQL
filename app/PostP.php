@@ -8,4 +8,5 @@ class PostP extends Model
 {
   protected $table = 'posts';
   public $timestamps = false;
+  public $incrementing = false;
 }

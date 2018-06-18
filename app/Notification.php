@@ -12,6 +12,7 @@ class Notification extends Model
 {
   protected $table = 'notifications';
   public $timestamps = true;
+  public $incrementing = false;
 
   //questa funzione manda una notifica al destinatario, dato un id(che può essere di un post o commento), l'utente "target", il tipo("likecomment", "likepost", "comment", l'id del post e una descrizione "mi piace" o "non mi piace")
   public function scopeSendNotification($query, $id, $user, $type, $post_id, $descr){

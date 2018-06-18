@@ -15,6 +15,7 @@ class Post extends Model
 {
   protected $table = 'posts';
   public $timestamps = false;
+  public $incrementing = false;
 
   //funzione che compara la data di creazione di un post
   public function cmp($a, $b) {

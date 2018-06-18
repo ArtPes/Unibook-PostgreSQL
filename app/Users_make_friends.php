@@ -8,6 +8,7 @@ class Users_make_friends extends Model
 {
   protected $table = 'users_make_friends';
   public $timestamps = false;
+  public $incrementing = false;
 
   //ritorno i record delle amicizie ricevute dall'utente
   public function scopeAskedfriends($query, $id){

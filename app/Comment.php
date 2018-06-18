@@ -15,7 +15,7 @@ class Comment extends Model
 {
   protected $table = 'comments';
   public $timestamps = false;
-
+  public $incrementing = false;
 
   public function scopeGetCommentsPost($query, $post_comments, $logged, $author, $in_page=null){
     $tmp_comm = array();

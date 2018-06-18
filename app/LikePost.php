@@ -14,6 +14,7 @@ class LikePost extends Model
 {
   protected $table = 'like_posts';
   public $timestamps = false;
+  public $incrementing = false;
 
   public function scopeGetPostLike($query, $post){
     //Prendo gli user che hanno like

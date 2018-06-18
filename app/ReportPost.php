@@ -8,4 +8,5 @@ class ReportPost extends Model
 {
   protected $table = 'report_posts';
   public $timestamps = true;
+  public $incrementing = false;
 }

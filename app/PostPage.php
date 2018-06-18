@@ -8,4 +8,5 @@ class PostPage extends Model
 {
   protected $table = 'posts_page';
   public $timestamps = false;
+  #public $incrementing = false;
 }

@@ -8,4 +8,5 @@ class CommentPage extends Model
 {
   protected $table = 'comments_page';
   public $timestamps = false;
+  public $incrementing = false;
 }

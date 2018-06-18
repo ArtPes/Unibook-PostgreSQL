@@ -293,6 +293,13 @@ class ComposerStaticInit2c1aff624ce3cca2ae275a8a7060106f
     );
 
     public static $prefixesPsr0 = array (
+        'W' => 
+        array (
+            'Webpatser\\Uuid' => 
+            array (
+                0 => __DIR__ . '/..' . '/webpatser/laravel-uuid/src',
+            ),
+        ),
         'P' => 
         array (
             'Prophecy\\' => 
@@ -353,7 +360,6 @@ class ComposerStaticInit2c1aff624ce3cca2ae275a8a7060106f
         'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
-        'App\\Http\\Controllers\\DetailsController' => __DIR__ . '/../..' . '/app/Http/Controllers/DetailsController.php',
         'App\\Http\\Controllers\\FriendshipController' => __DIR__ . '/../..' . '/app/Http/Controllers/FriendshipController.php',
         'App\\Http\\Controllers\\GeneralAppController' => __DIR__ . '/../..' . '/app/Http/Controllers/GeneralAppController.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
@@ -372,10 +378,13 @@ class ComposerStaticInit2c1aff624ce3cca2ae275a8a7060106f
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\LikeComment' => __DIR__ . '/../..' . '/app/LikeComment.php',
+        'App\\LikeCommentPage' => __DIR__ . '/../..' . '/app/LikeCommentPage.php',
         'App\\LikePost' => __DIR__ . '/../..' . '/app/LikePost.php',
+        'App\\LikePostPage' => __DIR__ . '/../..' . '/app/LikePostPage.php',
         'App\\Like_posts' => __DIR__ . '/../..' . '/app/Like_posts.php',
         'App\\Mail\\ConfirmEmail' => __DIR__ . '/../..' . '/app/Mail/ConfirmEmail.php',
         'App\\Mail\\ForgotPasswordEmail' => __DIR__ . '/../..' . '/app/Mail/ForgotPasswordEmail.php',
+        'App\\Mail\\SettingsEmail' => __DIR__ . '/../..' . '/app/Mail/SettingsEmail.php',
         'App\\Message' => __DIR__ . '/../..' . '/app/Message.php',
         'App\\MessageViewModel' => __DIR__ . '/../..' . '/app/MessageViewModel.php',
         'App\\Notification' => __DIR__ . '/../..' . '/app/Notification.php',
@@ -3681,6 +3690,8 @@ class ComposerStaticInit2c1aff624ce3cca2ae275a8a7060106f
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Rule' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Rule.php',
         'TypeError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/TypeError.php',
         'Webmozart\\Assert\\Assert' => __DIR__ . '/..' . '/webmozart/assert/src/Assert.php',
+        'Webpatser\\Uuid\\Uuid' => __DIR__ . '/..' . '/webpatser/laravel-uuid/src/Webpatser/Uuid/Uuid.php',
+        'Webpatser\\Uuid\\UuidServiceProvider' => __DIR__ . '/..' . '/webpatser/laravel-uuid/src/Webpatser/Uuid/UuidServiceProvider.php',
         'Whoops\\Exception\\ErrorException' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Exception/ErrorException.php',
         'Whoops\\Exception\\Formatter' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Exception/Formatter.php',
         'Whoops\\Exception\\Frame' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Exception/Frame.php',

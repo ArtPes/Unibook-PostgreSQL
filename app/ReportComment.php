@@ -8,4 +8,5 @@ class ReportComment extends Model
 {
   protected $table = 'report_comments';
   public $timestamps = true;
+  public $incrementing = false;
 }

@@ -12,7 +12,7 @@ use App\ResetPassword;
 use App\Message;
 
 use Cookie;
-
+use Webpatser\Uuid\Uuid;
 use App\Mail\ConfirmEmail;
 use App\Mail\ForgotPasswordEmail;
 use Illuminate\Support\Facades\Mail;
@@ -55,7 +55,7 @@ class RegisterController extends Controller
       return view('/register', compact('error'));
     }
     $user = new User;
-    $user -> id_user = uniqid();
+    $user -> id_user = Uuid::generate(4);
     $user -> name = request("name");
     $user -> surname = request("surname");
     $user -> birth_date = request("birth_date");

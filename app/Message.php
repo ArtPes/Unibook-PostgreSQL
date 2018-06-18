@@ -8,4 +8,5 @@ class Message extends Model
 {
   protected $table = 'messages';
   public $timestamps = true;
+  public $incrementing = false;
 }

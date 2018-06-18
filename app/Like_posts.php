@@ -8,4 +8,5 @@ class Like_posts extends Model
 {
   protected $table = 'like_posts';
   public $timestamps = false;
+  public $incrementing = false;
 }
