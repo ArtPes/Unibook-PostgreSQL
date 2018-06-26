@@ -29,17 +29,17 @@ class DatabaseSeeder extends Seeder
       ]);
 
       #creo utenti ENTITA' = users
-      $users = factory(App\User::class, 20)->create();
+      $users = factory(App\User::class, 200)->create();
 
       #creo pagine ENTITA' = pages
       #$pages = factory(App\Page::class, 2)->create();
 
       #creo post fatti da utenti e da pagine ENTITA' = posts
-      $postsU = factory(App\PostU::class, 50)->create();
+      $postsU = factory(App\PostU::class, 150)->create();
       #$postsP = factory(App\PostP::class, 22)->create();
 
       #creo commenti fatti da utenti e da pagine ENTITA' = comments
-      $commentsU = factory(App\CommentU::class, 15)->create();
+      $commentsU = factory(App\CommentU::class, 150)->create();
       #$commentsP = factory(App\CommentP::class, 150)->create();
       #servono due classi CommentU e CommentP che malgrado siano uguali,
       #si riferiscono a due factory diverse
@@ -47,12 +47,12 @@ class DatabaseSeeder extends Seeder
 
       #creo relazioni tra commenti fatti da utenti e da pagine ENTITA' = comments_user "or" comments_page
       #$page_comments = factory(App\CommentPage::class)->create();
-      $user_comments = factory(App\CommentUser::class, 5)->create();
+      $user_comments = factory(App\CommentUser::class, 50)->create();
 
 
       #creo relazioni tra post fatti da utenti e da pagine ENTITA' = posts_user "or" posts_page
       #$page_posts = factory(App\PostPage::class, 5)->create();
-      $user_posts = factory(App\PostUser::class, 10)->create();
+      $user_posts = factory(App\PostUser::class, 150)->create();
 
       #ovviamente al MAX cui possono essere n!/k!(n-k)! amicizie dove n = utenti
       #e k = 2 visto che le aicizie si stringono tra due utenti
