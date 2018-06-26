@@ -30,7 +30,7 @@
 
         <h2 id="statistiche">Statistiche</h2>
          <!--<input class="btn btn-secondary btn-sm" type="button" onclick="provaget()" value="provaget">
-         <input class="btn btn-secondary btn-sm" type="button" onclick="getPostDetails(4)" value="provapost">-->    
+         <input class="btn btn-secondary btn-sm" type="button" onclick="getPostDetails(4)" value="provapost">-->
         <section class="row text-center placeholders">
           <div class="col-6 col-sm-3 placeholder">
             <img src="data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs=" width="200" height="200" class="img-fluid rounded-circle"
@@ -93,28 +93,28 @@
         <div class="alert alert-primary" role="alert">
           <div class="row">
             <div class="col-md-3">
-                <label for="selectpickerPostlabel">Stato segnalazione:</label>           
+                <label for="selectpickerPostlabel">Stato segnalazione:</label>
                  <select class="selectpicker" id="selectpickerPost">
                   <option selected>Tutte</option>
                   <option>Aperte</option>
                   <option>Esaminate</option>
-                </select> 
+                </select>
             </div>
             <div class="col-md-3">
-               <label for="selectpickerMotivoPostlabel">Motivo segnalazione:</label>           
+               <label for="selectpickerMotivoPostlabel">Motivo segnalazione:</label>
                  <select class="selectpicker" id="selectpickerMotivoPost">
                   <option selected>Tutte</option>
                   <option>Incita all'odio</option>
                   <option>È una notizia falsa</option>
                   <option>È una minaccia</option>
-                </select> 
+                </select>
             </div>
             <div class="col-md-3">
-               <label for="textIdReportPostlabel">Id segnalazione:</label>           
-               <input type="text" id="textIdReportPost"> 
+               <label for="textIdReportPostlabel">Id segnalazione:</label>
+               <input type="text" id="textIdReportPost">
             </div>
             <div class="col-md-1">
-              
+
             </div>
             <div class="col-md-2">
                <button type="button" class="btn btn-danger" id="btnClearFilterPost"><i class="fa fa-times" aria-hidden="true"></i>&nbsp;&nbsp;Pulisci filtri</button>
@@ -177,45 +177,45 @@
           <div class="col-md-12">
             <nav aria-label="Page navigation example">
               <ul class="pagination justify-content-center" id="paginationPostUl">
-                
+
               </ul>
             </nav>
           </div>
         </div>
 
-        
 
 
-        
+
+
         <br id="segnalazioniComment">
-        
+
 
         <h2 id="segnalazioniCommenti">Segnalazioni commenti</h2>
         <div class="alert alert-primary" role="alert">
           <div class="row">
             <div class="col-md-3">
-                <label for="selectpickerCommentlabel">Stato segnalazione:</label>           
+                <label for="selectpickerCommentlabel">Stato segnalazione:</label>
                  <select class="selectpicker" id="selectpickerComment">
                   <option selected>Tutte</option>
                   <option>Aperte</option>
                   <option>Esaminate</option>
-                </select> 
+                </select>
             </div>
             <div class="col-md-3">
-               <label for="selectpickerMotivoCommentlabel">Motivo segnalazione:</label>           
+               <label for="selectpickerMotivoCommentlabel">Motivo segnalazione:</label>
                  <select class="selectpicker" id="selectpickerMotivoComment">
                   <option selected>Tutte</option>
                   <option>Incita all'odio</option>
                   <option>È una notizia falsa</option>
                   <option>È una minaccia</option>
-                </select> 
+                </select>
             </div>
             <div class="col-md-3">
-               <label for="textIdReportCommentlabel">Id segnalazione:</label>           
-               <input type="text" id="textIdReportComment"> 
+               <label for="textIdReportCommentlabel">Id segnalazione:</label>
+               <input type="text" id="textIdReportComment">
             </div>
             <div class="col-md-1">
-              
+
             </div>
             <div class="col-md-2">
                <button type="button" class="btn btn-danger" id="btnClearFilterComment"><i class="fa fa-times" aria-hidden="true"></i>&nbsp;&nbsp;Pulisci filtri</button>
@@ -277,7 +277,7 @@
           <div class="col-md-12">
             <nav aria-label="Page navigation example">
               <ul class="pagination justify-content-center" id="paginationCommentUl">
-                
+
               </ul>
             </nav>
           </div>
@@ -289,20 +289,20 @@
         <div class="alert alert-primary" role="alert">
           <div class="row">
             <div class="col-md-3">
-                <label for="selectpickerUserlabel">Stato utente:</label>           
+                <label for="selectpickerUserlabel">Stato utente:</label>
                  <select class="selectpicker" id="selectpickerUser">
                   <option selected>Tutti</option>
                   <option>Bloccati</option>
                   <option>Admin</option>
                   <option>Non attivi</option>
-                </select> 
+                </select>
             </div>
             <div class="col-md-6">
-               <label for="textIdUserlabel">Email:</label>           
-               <input type="text" id="textIdUser"> 
+               <label for="textIdUserlabel">Email:</label>
+               <input type="text" id="textIdUser">
             </div>
             <div class="col-md-1">
-              
+
             </div>
             <div class="col-md-2">
                <button type="button" class="btn btn-danger" id="btnClearFilterUser"><i class="fa fa-times" aria-hidden="true"></i>&nbsp;&nbsp;Pulisci filtri</button>
@@ -325,7 +325,7 @@
                 </thead>
                 <tbody id="tbodyUser">
                   @foreach($userList as $u)
-                    <tr id="userRow{{$r->id_report}}">
+                    <tr id="userRow{{$u->id_report}}">
                       <td>{{$u->id_user}}</td>
                       <td>{{$u->name}}&nbsp;{{$u->surname}}</td>
                       <td>{{$u->email}}</td>
@@ -371,7 +371,7 @@
           <div class="col-md-12">
             <nav aria-label="Page navigation example">
               <ul class="pagination justify-content-center" id="paginationUserUl">
-                
+
               </ul>
             </nav>
           </div>
@@ -384,18 +384,18 @@
         <div class="alert alert-primary" role="alert">
           <div class="row">
             <div class="col-md-3">
-                <label for="selectpickerPagelabel">Stato pagina:</label>           
+                <label for="selectpickerPagelabel">Stato pagina:</label>
                  <select class="selectpicker" id="selectpickerPage">
                   <option selected>Tutte</option>
                   <option>Bloccate</option>
-                </select> 
+                </select>
             </div>
             <div class="col-md-6">
-               <label for="textIdPagelabel">Nome pagina:</label>           
-               <input type="text" id="textIdPage"> 
+               <label for="textIdPagelabel">Nome pagina:</label>
+               <input type="text" id="textIdPage">
             </div>
             <div class="col-md-1">
-              
+
             </div>
             <div class="col-md-2">
                <button type="button" class="btn btn-danger" id="btnClearFilterPage"><i class="fa fa-times" aria-hidden="true"></i>&nbsp;&nbsp;Pulisci filtri</button>
@@ -451,7 +451,7 @@
           <div class="col-md-12">
             <nav aria-label="Page navigation example">
               <ul class="pagination justify-content-center" id="paginationPageUl">
-                
+
               </ul>
             </nav>
           </div>
@@ -498,10 +498,10 @@
         <div class="row">
           <div class="col-md-12">
            <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
-           <button type="button" class="btn btn-secondary" id="btnViewPost">Visualizza post</button>        
+           <button type="button" class="btn btn-secondary" id="btnViewPost">Visualizza post</button>
            <button type="button" class="btn btn-danger" data-dismiss="modal" id="btnEliminaPost">Elimina post</button>
            <button type="button" class="btn btn-danger" id="btnEliminaBanPost" data-dismiss="modal">Elimina e blocca autore</button>
-           <button type="button" class="btn btn-default" data-dismiss="modal" id="btnIgnoraReportPost">Ignora segnalazione</button>    
+           <button type="button" class="btn btn-default" data-dismiss="modal" id="btnIgnoraReportPost">Ignora segnalazione</button>
           </div>
         </div>
       </div>
@@ -545,10 +545,10 @@
       <div class="modal-footer">
          <div class="row">
           <div class="col-md-12">
-           <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>      
+           <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
            <button type="button" class="btn btn-danger" data-dismiss="modal" id="btnEliminaComment">Elimina commento</button>
            <button type="button" class="btn btn-danger" id="btnEliminaBanComment" data-dismiss="modal">Elimina e blocca autore</button>
-           <button type="button" class="btn btn-default" data-dismiss="modal" id="btnIgnoraReportComment">Ignora segnalazione</button>    
+           <button type="button" class="btn btn-default" data-dismiss="modal" id="btnIgnoraReportComment">Ignora segnalazione</button>
           </div>
         </div>
       </div>
@@ -588,8 +588,8 @@
          <div class="row">
           <div class="col-md-12">
            <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
-          <a type="button" class="btn btn-secondary" href="#" id="btnViewProfile">Visualizza profilo</a>      
-            <button type="button" class="btn btn-primary" id="btnToggleAdmin" data-dismiss="modal">Promuovi a amministratore</button>    
+          <a type="button" class="btn btn-secondary" href="#" id="btnViewProfile">Visualizza profilo</a>
+            <button type="button" class="btn btn-primary" id="btnToggleAdmin" data-dismiss="modal">Promuovi a amministratore</button>
            <button type="button" class="btn btn-danger" data-dismiss="modal" id="toggleBan">Blocca utente</button>
           </div>
         </div>
@@ -622,7 +622,7 @@
          <div class="row">
           <div class="col-md-12">
            <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
-           <button type="button" class="btn btn-primary" data-dismiss="modal" id="bthSendMessageUser" disabled="true">Invia messaggio</button>    
+           <button type="button" class="btn btn-primary" data-dismiss="modal" id="bthSendMessageUser" disabled="true">Invia messaggio</button>
           </div>
         </div>
       </div>
@@ -664,7 +664,7 @@
       <div class="modal-footer">
          <div class="row">
           <div class="col-md-12">
-           <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>      
+           <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
            <button type="button" class="btn btn-danger" data-dismiss="modal" id="toggleBanPage">Blocca pagina</button>
           </div>
         </div>
@@ -689,7 +689,7 @@
   <script src="../assets/js/admin/raphael-min.js"></script>
 
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
-    
+
 
   <script src="../assets/js/admin/dashboardAJAX.js"></script>
 
@@ -713,7 +713,7 @@
         }else{
           html = '<li class="page-item" id="previousPostPage">';
           html = html + ' <button class="page-link" tabindex="-1" onclick="getPage(' + (currentPage - 1) + ')"><i class="fa fa-angle-double-left" aria-hidden="true"></i></button>';
-          html = html + '</li>';          
+          html = html + '</li>';
         }
 
         var i;
@@ -734,7 +734,7 @@
           html = html + ' <button class="page-link" tabindex="-1" onclick="getPage(' + (currentPage + 1) + ')"><i class="fa fa-angle-double-right" aria-hidden="true"></i></button>';
           html = html + '</li>';
         }
-       
+
         $('#paginationPostUl').html(html);
     }
 
@@ -746,7 +746,7 @@
           data: { page: page, filter: scelta, motivo: motivoReportPost, idReportPost: idReportPost }
       }).done(function (data) {
           currentPage = page;
-          manageRow(data);  
+          manageRow(data);
           if(data.length > 0)
             generatePagination(data[0].totPage, page);
           else
@@ -780,7 +780,7 @@
         //  rows = rows + '   <a class="dropdown-item" href="#">';
         //  rows = rows + '          <i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Contatta utente</a>';
         //}
-              
+
         rows = rows + '   </div>';
         rows = rows + '  </div>';
         rows = rows + '</td>';
@@ -942,7 +942,7 @@
         }else{
           html = '<li class="page-item" id="previousPostPage">';
           html = html + ' <button class="page-link" tabindex="-1" onclick="getPageComment(' + (currentPage - 1) + ')"><i class="fa fa-angle-double-left" aria-hidden="true"></i></button>';
-          html = html + '</li>';          
+          html = html + '</li>';
         }
 
         var i;
@@ -963,7 +963,7 @@
           html = html + ' <button class="page-link" tabindex="-1" onclick="getPageComment(' + (currentPage + 1) + ')"><i class="fa fa-angle-double-right" aria-hidden="true"></i></button>';
           html = html + '</li>';
         }
-       
+
         $('#paginationCommentUl').html(html);
     }
 
@@ -975,7 +975,7 @@
           data: { page: page, filter: sceltaComment, motivo: motivoReportComment, idReportPost: idReportComment }
       }).done(function (data) {
           currentPageComment = page;
-          manageRowComment(data);  
+          manageRowComment(data);
           if(data.length > 0)
             generatePaginationComment(data[0].totPage, page);
           else
@@ -1083,7 +1083,7 @@
         }else{
           html = '<li class="page-item" id="previousPostPage">';
           html = html + ' <button class="page-link" tabindex="-1" onclick="getPageUser(' + (currentPage - 1) + ')"><i class="fa fa-angle-double-left" aria-hidden="true"></i></button>';
-          html = html + '</li>';          
+          html = html + '</li>';
         }
 
         var i;
@@ -1104,7 +1104,7 @@
           html = html + ' <button class="page-link" tabindex="-1" onclick="getPageUser(' + (currentPage + 1) + ')"><i class="fa fa-angle-double-right" aria-hidden="true"></i></button>';
           html = html + '</li>';
         }
-       
+
         $('#paginationUserUl').html(html);
     }
 
@@ -1116,7 +1116,7 @@
           data: { page: page, filter: sceltaUser, idUser: idUser }
       }).done(function (data) {
           currentPageUser = page;
-          manageRowUser(data);  
+          manageRowUser(data);
           if(data.length > 0)
             generatePaginationUser(data[0].totPage, page);
           else
@@ -1379,7 +1379,7 @@
       }else{
         html = '<li class="page-item" id="previousPostPage">';
         html = html + ' <button class="page-link" tabindex="-1" onclick="getPagePage(' + (currentPage - 1) + ')"><i class="fa fa-angle-double-left" aria-hidden="true"></i></button>';
-        html = html + '</li>';          
+        html = html + '</li>';
       }
 
       var i;
@@ -1400,7 +1400,7 @@
         html = html + ' <button class="page-link" tabindex="-1" onclick="getPagePage(' + (currentPage + 1) + ')"><i class="fa fa-angle-double-right" aria-hidden="true"></i></button>';
         html = html + '</li>';
       }
-     
+
       $('#paginationPageUl').html(html);
     }
 
@@ -1412,7 +1412,7 @@
           data: { page: page, filter: sceltaPage, idPage: idPage }
       }).done(function (data) {
           currentPagePage = page;
-          manageRowPage(data);  
+          manageRowPage(data);
           if(data.length > 0)
             generatePaginationPage(data[0].totPage, page);
           else
@@ -1433,7 +1433,7 @@
           rows = rows + '<td><span class="badge badge-danger" id="labelStatusPage' + value.id_page + '">Bloccato</span></td>';
         }else{
           rows = rows + '<td><span id="labelStatusPage"></span></td>';
-          
+
         }
         rows = rows + '<td>';
         rows = rows + ' <div class="dropdown">';

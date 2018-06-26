@@ -5,7 +5,7 @@ php artisan migrate:fresh
 echo "Migrate completate"
 php artisan db:seed --class=DatabaseSeeder
 echo "DatabaseSeeder eseguito"
-#php artisan db:seed --class=PostSeeder
-#echo "PostSeeder eseguito"
-#php artisan db:seed --class=CommentSeeder
-#echo "CommentSeeder eseguito"
+php artisan db:seed --class=PostSeeder
+echo "PostSeeder eseguito"
+php artisan db:seed --class=CommentSeeder
+echo "CommentSeeder eseguito"
